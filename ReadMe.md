@@ -1,8 +1,9 @@
-PROJECT :
+PROJECT :Natural disaster prediction and warning system.
 
 Members of Team HEXALL:
 =======================
 Rajat Shenoy ,Avi Solanki ,Roshan Jacob.
+
  
 Goal :To create a robust prediction system for earthquake aftershocks and cyclone prediction, and provide a real time map, which informs the user about all the significant earthquakes that have happened over a week or a month.
 

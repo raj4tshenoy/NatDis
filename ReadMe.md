@@ -1,17 +1,18 @@
 PROJECT :Natural disaster prediction and warning system.
 
-Members of Team HEXALL:
+Short Note:
 =======================
 Rajat Shenoy ,Avi Solanki ,Roshan Jacob.
 
  
-Goal :To create a robust prediction system for earthquake aftershocks and cyclone prediction, and provide a real time map, which informs the user about all the significant earthquakes that have happened over a week or a month.
+Goal :To predict the probability of occurence of an Aftershock with 80% or more accuracy and to cater to the needs of the people affected by the disaster through our app or SMS.
 
-Technologies used: OpenWeatherMap API, Flutter, Scripts coded in Python, Matlab , One vs Rest ML Models, C#, Azure SDK.
-UGCS urls,
+Technologies used: OpenWeatherMap API, Flutter, Scripts coded in Python, Matlab , Deep Learning, C#, Azure SDK,
+UGCS urls, Twilio API, Flask.
 
-Workflow:
-The ML Scripts are stored on the cloud and process the real-time data from the OpenWeatherMap API at regular intervals. In case the probability of a disaster is above average, (Say 0.6 is the average) then an SMS alert is sent to the evacuation authorities and media bodies in that locality by using Twilio and Azure Services. People having the mobile app will be alterted by a notification with evacuation procedures & protective measures.
+Work Flow:
+=======================
+Our Deeplearning model gets data input from realtime sources at specific intervals. In case an Aftershock is predicted, an SMS broadcast is sent to concerned authorities and locals. The Application is a Disaster Helpline / Relief application which can be used by people to contact authorities and help authorities to conduct necessary actions. The App has multiple features such as SOS and Missing person, which alert the authorities to initiate a relief or search operation. Users can also send an SMS to our phone number if they do not have internet access to make use of the same features.
 
 ABSTRACT: 
 ========

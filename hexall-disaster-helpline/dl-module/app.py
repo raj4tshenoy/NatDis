@@ -48,7 +48,7 @@ def singleshot():
 
 def send_sms():
 	account_sid = 'ACe802b4241415db24a7d114d8e62045aa'
-	auth_token = 'your_auth_token'
+	auth_token = '869bda995467f56f4881a7da2e4de14e'
 	client = Client(account_sid, auth_token)
 
 	message = client.messages \

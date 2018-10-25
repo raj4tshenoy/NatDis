@@ -8,8 +8,8 @@ Rajat Shenoy ,Avi Solanki ,Roshan Jacob.
  
 Goal :To predict the probability of occurence of an Aftershock with 80% or more accuracy and to cater to the needs of the people affected by the disaster through our app or SMS.
 
-Technologies used: OpenWeatherMap API, Flutter, Scripts coded in Python, Matlab , Deep Learning, C#, Azure SDK,
-UGCS urls, Twilio API, Flask.
+Technologies used: Flutter, Scripts coded in Python, Matlab , Deep Learning, Tensorflow, Keras
+UGCS urls, Twilio API, Flask, Firebase, Azure AppServices, JavaScript, HTML, LeafletJS
 
 Work Flow:
 =======================

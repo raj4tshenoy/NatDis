@@ -2,7 +2,7 @@
 Microsoft codefundo++ project
 =======================
 
-PROJECT :Natural disaster prediction and warning system.
+PROJECT HEXALL :A Natural disaster prediction and warning system.
 
 Short Note:
 =======================
@@ -24,7 +24,9 @@ ABSTRACT:
 Predicting and managing earthquakes is indeed a difficult task , since the seismic readings play a vital role in the same.We would be creating a model to accurately classify these disasters based on real time data .
 The main idea,isn ot to go for the Earthquake prediction before time using Time series,RNN's or LSTMS
 But to look at the other aspect of the aftereffects of an earthquake and the aftershocks it brings with it . 
-If we are able to predict the after shocks and predict the location , we would be able to warn all people in a particular radius of interest.Further , Tsunamis which follow after earthquakes can also be predicted but have not been discussed in the project .
+If we are able to predict the after shocks and predict the location , we would be able to warn all people in a particular radius of interest.
+
+Further , Tsunamis which follow after earthquakes can also be predicted but have not been discussed in the project .
 
 MOTIVATION BEHIND THE IDEA:
 =========================
@@ -39,8 +41,10 @@ The output of this final neuron may be interpreted as the predicted probability 
 The algorithm:
 -------------
 The idea is to observe a volume which extends by
-   'K' kms horizontally
-   'V' km vertically from the main shock. 
+   
+   1.'K' kms horizontally
+   
+   2.'V' km vertically from the main shock. 
 
 In our network , K is 100 and V is 50.
 
@@ -56,6 +60,7 @@ Aftershock and aftereffects prediction is the final output
 Data from SRCMOD(public dataset)
 ---------------- 
 http://equake-rc.info/SRCMOD/searchmodels/allevents/
+----------------
 
 The data source above is of the Finite rupture source form which has been convereted to a CSV file , whose scripts will not be discussed in this repository. The data provided by the SCRMOD file contains the information about the hypocenter, latitude, longitude, magnitude, strike, dip, the inversion parameters and many other relevant data that is sufficient to get an insight of the earthquake and the stress patterns. 
 
@@ -71,8 +76,8 @@ Batch size:4000
 Other references of use:
 ========================
 1.Study material:http://www.bosai.go.jp/study/application/dc3d/DC3Dhtml_E.html
-2.Research paper:https://eost.unistra.fr/fileadmin/upload/EOST/Zacharie_Duputel/Papiers/DeVries_et_al2018.pdf
 
+2.Research paper:https://eost.unistra.fr/fileadmin/upload/EOST/Zacharie_Duputel/Papiers/DeVries_et_al2018.pdf
 
 
 

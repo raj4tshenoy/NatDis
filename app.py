@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+from keras import backend as K
 import csv
 from twilio.rest import Client
 import numpy as np
@@ -7,6 +8,8 @@ from collections import defaultdict
 import sklearn
 import json
 import random
+
+K.clear_session()
 
 app = Flask(__name__)
 
@@ -91,7 +94,7 @@ def predict():
 	auc = singleshot()
 	
 	#call caution function
-	if auc>0.700:
+	if auc>0.7000:
 		send_sms()
 
 	#return output on webpage

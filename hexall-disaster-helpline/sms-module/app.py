@@ -5,11 +5,15 @@ from twilio import twiml
 
 
 def send_sms(inp):
-    account_sid = 'ACe802b4241415db24a7d114d8e62045aa'
-    auth_token = '869bda995467f56f4881a7da2e4de14e'
+    str = open('strings.txt', 'r').read()
+    index = str.find("=") + 2
+    account_sid = str[index:str.find("\n")]
+    index = str.rfind("=") + 2
+    auth_token = str[index:]
+
     client = Client(account_sid, auth_token)
 
-client.messages.create(to="+918073390419", 
+    client.messages.create(to="+918073390419", 
                        from_="+13153874357", 
                        body="Missing search request. Inbound: "+inp)
 
@@ -46,4 +50,4 @@ def inbound_sms():
 
 
 if __name__ == '__main__':
-	run(host='127.0.0.1', port=5000, debug=True, reloader=True)
+    run(host='127.0.0.1', port=5000, debug=True, reloader=True)

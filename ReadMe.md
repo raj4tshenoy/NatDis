@@ -76,10 +76,8 @@ Batch size:4000
 Other references of use:
 ========================
 1.Study material:http://www.bosai.go.jp/study/application/dc3d/DC3Dhtml_E.html
-========================
 
 2.Research paper:https://eost.unistra.fr/fileadmin/upload/EOST/Zacharie_Duputel/Papiers/DeVries_et_al2018.pdf
-========================
 
 
 

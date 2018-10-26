@@ -60,7 +60,6 @@ Aftershock and aftereffects prediction is the final output
 Data from SRCMOD(public dataset)
 ---------------- 
 http://equake-rc.info/SRCMOD/searchmodels/allevents/
-----------------
 
 The data source above is of the Finite rupture source form which has been convereted to a CSV file , whose scripts will not be discussed in this repository. The data provided by the SCRMOD file contains the information about the hypocenter, latitude, longitude, magnitude, strike, dip, the inversion parameters and many other relevant data that is sufficient to get an insight of the earthquake and the stress patterns. 
 

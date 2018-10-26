@@ -5,12 +5,15 @@ import numpy as np
 import helper_functions
 from collections import defaultdict
 import sklearn
+import json
+import random
 
 app = Flask(__name__)
 
 #compute function
 def singleshot():
-	filename = 'rt-data-io/incoming.csv'
+	fn = str(random.randint(1,25))
+	filename = 'rt-data-io/'+fn+'.csv'
 	weightFile = 'Data/weights.h5'
 	predFile = 'Data/singleCSV/singlePred.h5'
 	columns = ['stresses_full_xx', 'stresses_full_yy', 
@@ -71,28 +74,24 @@ def hexalldm():
 @app.route('/', methods=['GET','POST'])
 def predict():
 	#fetch input data from textfields
-	sx = request.form['sx']
-	sy = request.form['sy']
-	sz = request.form['sz']
-	sxx = request.form['sxx']
-	syy = request.form['syy']
-	sxy = request.form['sxy']
-	sxz = request.form['sxz']
-	syz = request.form['syz']
-	szz = request.form['szz']
-	
-	#on BETA
-	#with open('rt-data-io/incoming.csv', 'w') as outfile:
-		#wte = csv.writer(outfile)
-		#rows = [['x','y','z','stresses_full_xx', 'stresses_full_yy', 'stresses_full_xy', 'stresses_full_xz','stresses_full_yz','stresses_full_zz'],[sx,sy,sz,sxx,syy,sxy,sxz,syz,szz]]
-		#for row in rows:
-			#wte.writerow(row)
+	#sx = request.form['sx']
+	#sy = request.form['sy']
+	#sz = request.form['sz']
+	#sxx = request.form['sxx']
+	#syy = request.form['syy']
+	#sxy = request.form['sxy']
+	#sxz = request.form['sxz']
+	#syz = request.form['syz']
+	#szz = request.form['szz']
+	#asyn = request.form['asyn']
+
+			#random.randint(1,5)
 
 	#call computing function		
 	auc = singleshot()
 	
 	#call caution function
-	if auc>0.7:
+	if auc>0.700:
 		send_sms()
 
 	#return output on webpage

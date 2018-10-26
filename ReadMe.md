@@ -38,14 +38,19 @@ The output of this final neuron may be interpreted as the predicted probability 
 
 The algorithm:
 -------------
-The idea is to observe a volume which extends by 'K' kms horizontally and 'V' km vertically from the main shock. 
-In our network , K is 100 and V is 50. (This is based on a recent paper)
+The idea is to observe a volume which extends by
+   'K' kms horizontally
+   'V' km vertically from the main shock. 
+
+In our network , K is 100 and V is 50.
+
+
 1.Distribute the volume into 5km x 5km x 5km small volumes.
 2.Elastic 'stress change tensors' at each of their centroid. 
 3.Predict whether there was an aftershock in that small volume or not. 
 4.In order to know the ground truth we use International Seismological Center (ISC) event catalogue, in which for each main shock we looked up for its corresponding aftershocks from 1 sec to 1 year time and using that information we created our ground truth i.e. whether there was an aftershock in that small volume or not.
-Binary classificcation of an aftershock - 1 or 0 i.e yes or no.
-Deep learning for aftershock and aftereffects prediction using deep learning.
+Binary classificcation of an aftershock .
+Aftershock and aftereffects prediction is the final output
 
 
 Data from SRCMOD(public dataset)

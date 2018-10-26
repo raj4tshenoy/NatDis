@@ -2,17 +2,14 @@
 
 from bottle import (post, request, response, route, run, )
 from twilio import twiml
-
+import json
 
 def send_sms(inp):
-    str = open('strings.txt', 'r').read()
-    index = str.find("=") + 2
-    account_sid = str[index:str.find("\n")]
-    index = str.rfind("=") + 2
-    auth_token = str[index:]
-
+    f = open("strings.json")
+    data = json.load(f)
+    account_sid = data["ids"]["acc_sid"]
+    auth_token = data["ids"]["auth_token"]
     client = Client(account_sid, auth_token)
-
     client.messages.create(to="+918073390419", 
                        from_="+13153874357", 
                        body="Missing search request. Inbound: "+inp)

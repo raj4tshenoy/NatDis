@@ -47,16 +47,12 @@ def singleshot():
 	return auc;
 
 def send_sms():
-<<<<<<< HEAD
-	str = open('strings.txt', 'r').read()
-	index = str.find("=") + 2
-	account_sid = str[index:str.find("\n")]
-	index = str.rfind("=") + 2
-	auth_token = str[index:]
-=======
-	account_sid = 'ACe802b4241415db24a7d114d8e62045aa'
-	auth_token = '869bda995467f56f4881a7da2e4de14e'
->>>>>>> 5fc8e074ad9e8ca4cfc85fd68a8f976355ff987e
+
+	f = open("strings.json")
+	data = json.load(f)
+	account_sid = data["ids"]["acc_sid"]
+	auth_token = data["ids"]["auth_token"]
+
 	client = Client(account_sid, auth_token)
 
 	message = client.messages \
